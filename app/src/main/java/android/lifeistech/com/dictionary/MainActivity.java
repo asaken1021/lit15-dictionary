@@ -105,9 +105,8 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("Error", "wordSet.remove(i)で例外が発生しました。(NullPointerException)");
                 }
 
-                hashMap.remove("wordSet", i);
-
                 editor.remove(i);
+                editor.putStringSet("wordSet", wordSet);
                 editor.commit();
                 break;
             default:
